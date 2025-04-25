@@ -11,23 +11,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Set environment variables
-      env:
-        BASE_URL: https://deezerdevs-deezer.p.rapidapi.com
-        NODE_ENV: dev
-        RAPIDAPI_KEY: b16d0dbc28mshea27719b75248cep17af61jsnd8e8f5a5deab
-        RAPIDAPI_HOST: deezerdevs-deezer.p.rapidapi.com
-
-    - name: Run Jest Tests
-      run: npm run DEEZER_test
+      - name: Run Jest Tests
+        env:
+          BASE_URL: https://deezerdevs-deezer.p.rapidapi.com
+          NODE_ENV: dev
+          RAPIDAPI_KEY: b16d0dbc28mshea27719b75248cep17af61jsnd8e8f5a5deab
+          RAPIDAPI_HOST: deezerdevs-deezer.p.rapidapi.com
+        run: npm run DEEZER_test
