@@ -3,7 +3,7 @@ const { artist } = require("./urls");
 module.exports = {
     infoDeezer: {
         country_iso: "US",
-        country: "United States",
+        country: "United States of America",
         open: true,
         pop: "fr",
         upload_token_lifetime: 14400,
