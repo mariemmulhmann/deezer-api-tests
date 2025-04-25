@@ -2,8 +2,8 @@ const { artist } = require("./urls");
 
 module.exports = {
     infoDeezer: {
-        country_iso: "BR",
-        country: "Brasil",
+        country_iso: "US",
+        country: "United States",
         open: true,
         pop: "fr",
         upload_token_lifetime: 14400,
